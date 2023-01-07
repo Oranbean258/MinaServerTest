@@ -52,7 +52,7 @@ public class Server {
             // 设置读取数据的缓冲区大小
             acceptor.getSessionConfig().setReadBufferSize(20480);
             // 读写通道10秒内无操作进入空闲状态
-            acceptor.getSessionConfig().setIdleTime(IdleStatus.BOTH_IDLE, 10);
+            acceptor.getSessionConfig().setIdleTime(IdleStatus.BOTH_IDLE, 60);
             // 绑定逻辑处理器
             acceptor.setHandler(new MinaServerHandler());
             // 绑定端口
